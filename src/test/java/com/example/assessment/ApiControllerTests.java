@@ -45,11 +45,10 @@ class ApiControllerTests {
         CustomData invalidData = new CustomData();
         invalidData.setStringValue("Teste");
         invalidData.setIntValue(3);
+
         ResponseEntity<String> response = apiController.handlePostRequest(invalidData);
 
-        assertEquals(HttpStatus.OK, response.getStatusCode());
-        assertEquals("Erro 400, bad request.", response.getBody());
+        assertEquals(HttpStatus.BAD_REQUEST, response.getStatusCode());
     }
-
 
 }

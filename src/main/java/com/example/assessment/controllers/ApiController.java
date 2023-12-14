@@ -26,6 +26,7 @@ public class ApiController {
         log.info("Status Code: 200");
         return ResponseEntity.ok("Postado com sucesso! Número do ID: " + id);
     }
+
     @GetMapping("/get")
     public ResponseEntity<CustomData> handleGetRequest(
             @RequestParam(required = false, name = "id") Long id,
