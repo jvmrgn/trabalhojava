@@ -2,6 +2,7 @@ package com.example.assessment.controllers;
 import com.example.assessment.model.CustomData;
 import com.example.assessment.service.ApiService;;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -18,7 +19,7 @@ public class ApiController {
     @PostMapping("/post")
     public ResponseEntity<String> handlePostRequest(@RequestBody CustomData requestObject) {
         if (requestObject == null || !isValidData(requestObject)) {
-            return ResponseEntity.ok("Erro 400, bad request.");
+            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("Erro 400, bad request.");
         }
 
         long id = apiService.saveData(requestObject);
