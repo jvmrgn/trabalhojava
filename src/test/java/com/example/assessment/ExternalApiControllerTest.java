@@ -1,3 +1,4 @@
+package com.example.assessment;
 
 import com.example.assessment.controllers.ExternalApiController;
 import com.example.assessment.model.ResponseExternalApi;
