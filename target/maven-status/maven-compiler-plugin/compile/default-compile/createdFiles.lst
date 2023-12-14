@@ -1,0 +1,8 @@
+com\example\assessment\model\CustomData.class
+com\example\assessment\service\ApiService.class
+com\example\assessment\model\CustomDataStorage.class
+com\example\assessment\controllers\ExternalApiController.class
+com\example\assessment\AssessmentApplication.class
+com\example\assessment\controllers\ApiController.class
+com\example\assessment\model\ResponseExternalApi.class
+com\example\assessment\service\ExternalApiService.class
